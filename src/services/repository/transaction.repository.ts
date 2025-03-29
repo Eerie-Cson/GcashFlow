@@ -10,7 +10,6 @@ export type TransactionRepository = Repository<Transaction>;
 export function TransactionFactory(
   connection: Connection
 ): TransactionRepository {
-  console.log(connection.readyState);
   return new MongooseRepository<Transaction>(connection, "Transaction", {
     id: ObjectId,
     amount: Number,

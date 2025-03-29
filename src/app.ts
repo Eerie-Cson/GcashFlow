@@ -12,7 +12,7 @@ export class App {
   private readonly port: number;
   constructor() {
     this.app = express();
-    this.port = parseInt(process.env.PORT || "3000");
+    this.port = parseInt(process.env.PORT || "3001");
     this.initializeMiddlewares();
     this.initializeRoutes();
   }
@@ -28,7 +28,12 @@ export class App {
   }
 
   private initializeMiddlewares(): void {
-    this.app.use(cors());
+    this.app.use(
+      cors({
+        origin: "http://localhost:3001",
+        credentials: true,
+      })
+    );
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(morgan("dev"));
