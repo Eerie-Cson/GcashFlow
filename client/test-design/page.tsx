@@ -1,15 +1,9 @@
 "use client";
 import React, { useState, useMemo, useEffect } from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./card";
+import { Input } from "./input";
+import { Button } from "./button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,7 +14,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+} from "./alert-dialog";
 import { ArrowUpRight, Wallet, CreditCard } from "lucide-react";
 import {
   LineChart,
